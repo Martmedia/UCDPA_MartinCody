@@ -20,6 +20,6 @@ martmovies = pd.read_csv(file_url)
 for x in range(0, 5):
     # print("Genre: " + dataFrame.loc[x, 'genres'] + ", budget: " + str(dataFrame.loc[x, 'budget']))
     print("Genre: " + martmovies.loc[x, 'genres'])
-
+martmovies.info()
 
 
