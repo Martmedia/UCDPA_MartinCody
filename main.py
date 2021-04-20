@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import datetime as dt
+from shapely.geometry import Point
+import geo as gpd
 
 def printMostRecentMovie(df):
     df_sorted = df.sort_values('release_date', ascending=False)
