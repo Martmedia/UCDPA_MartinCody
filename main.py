@@ -95,7 +95,13 @@ printMostRecentMovie(martmovies)
 
 printMostProfitableMovie(martmovies)
 
-sns.scatterplot(data=martmovies, x="release_date", y="popularity", hue='popularity')
+print(martmovies["revenue"].max())
+
+
+#Plots/insights
+sns.lineplot(data=martmovies.groupby(['first_genre', 'release_year'])[['profitability']].mean(), x="release_year", y="profitability", hue='first_genre')
+
+#sns.scatterplot(data=martmovies, x="popularity", y="revenue", hue='revenue')
 
 
 
